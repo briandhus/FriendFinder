@@ -30,11 +30,11 @@ module.exports = function(app) {
         friendA = newFriend.totalScore;
         friendB = friends[i].totalScore;
       }
-      var difference = newFriend.totalScore - friends[i].totalScore;
-      if (difference < greatestDifference) {
-        greatestDifference = difference;
-        bestFriend = friends[i].name;
-      }
+      // var difference = newFriend.totalScore - friends[i].totalScore;
+      // if (difference < greatestDifference) {
+      //   greatestDifference = difference;
+      //   bestFriend = friends[i].name;
+      // }
     }
     friends.push(newFriend);
     res.json({name: bestFriend});
