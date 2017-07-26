@@ -6,7 +6,7 @@ var app = express();
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-var PORT = process.env.PORT;
+var PORT = process.env.PORT || 8080;
 
 // app.get('/', function (req, res) {
 //   res.send('Hello World')

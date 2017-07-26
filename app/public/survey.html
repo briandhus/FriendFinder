@@ -173,10 +173,15 @@
             var newFriend = {
                 name: $('#name').val(),
                 photo: $('#photo').val(),
-                scores: [$('#q1').val(), $('#q2').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val(),]
+                scores: [$('#q1').val(), $('#q2').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(), $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()]
             }
-            $.post('/api/friends', newFriend, function(data) {
-
+            $.post('/api/friends', newFriend, function(err, data) {
+                if (err) {
+                    console.log(err);
+                }
+                // $('#matchName').text(data.name);
+                // $('#matchImg').attr('src', data.photo);
+                // $('#resultsModal').modal('toggle');
             })
         })
 
