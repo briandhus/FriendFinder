@@ -179,9 +179,10 @@
                 if (err) {
                     console.log(err);
                 }
-                // $('#matchName').text(data.name);
-                // $('#matchImg').attr('src', data.photo);
-                // $('#resultsModal').modal('toggle');
+                console.log(data);
+                $('#matchName').text(data.name);
+                $('#matchImg').attr('src', data.photo);
+                $('#myModal').modal('toggle');
             })
         })
 

@@ -11,6 +11,7 @@ module.exports = function(app) {
 
   // post route
   app.post('/api/friends', function(req, res) {
+    // console.log(req);
     var newFriend = req.body;
     console.log('new', newFriend);
     var total = 0;
