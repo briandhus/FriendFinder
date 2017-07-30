@@ -32,6 +32,8 @@ module.exports = function(app) {
         friendB = friends[i].totalScore;
       }
       var difference = newFriend.totalScore - friends[i].totalScore;
+      console.log(friendA);
+      console.log(friendB);
       if (difference < greatestDifference) {
         greatestDifference = difference;
         bestFriend = friends[i];
