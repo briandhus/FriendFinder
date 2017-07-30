@@ -13,7 +13,7 @@ module.exports = function(app) {
   app.post('/api/friends', function(req, res) {
     // console.log(req);
     var newFriend = req.body;
-    console.log('new', newFriend);
+    // console.log('new', newFriend);
     var total = 0;
     for (var i = 0; i < req.body.scores.length; i++) {
       total += parseInt(req.body.scores[i]);
@@ -34,11 +34,11 @@ module.exports = function(app) {
       var difference = newFriend.totalScore - friends[i].totalScore;
       if (difference < greatestDifference) {
         greatestDifference = difference;
-        bestFriend = friends[i].name;
+        bestFriend = friends[i];
       }
     }
     friends.push(newFriend);
-    res.json({name: bestFriend});
+    res.send(bestFriend);
   });
 };
 
